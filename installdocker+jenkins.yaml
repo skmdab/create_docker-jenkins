@@ -38,7 +38,7 @@
      name: docker
      state: started
 
----
+...
 - hosts: docker_jenkins
   become: true
   gather_facts: yes
