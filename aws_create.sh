@@ -51,7 +51,6 @@ progress_bar 75
 
 echo "$INSTANCENAME Server Created Successfully!"
 
-chmod 700 filinta.pem
 
 PUBLICIP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query 'Reservations[].Instances[].PublicIpAddress' | cut -d "[" -f2 | cut -d "]" -f1 | tr -d '" ')
 
@@ -60,10 +59,14 @@ $PUBLICIP ansible_user=ubuntu"
 
 PHLINE="[$INSTANCENAME]\n\n$PUBLICIP ansible_user=ubuntu"
 
-PATH="/root/.jenkins/workspace/$INSTANCENAME"
+PATH1="/var/lib/jenkins/workspace/$INSTANCENAME"
+PATH2="/root/.jenkins/workspace/$INSTANCENAME"
 
-if [ "$(echo "$PWD")" = "$PATH" ]; then
+if [ "$(echo "$PWD")" = "$PATH1" ]; then
+  echo "$PCLINE" > hosts
+elif [ "$(echo "$PWD")" = "$PATH2" ]; then
   echo "$PCLINE" > hosts
 else
   echo "$PHLINE" > hosts
 fi
+
