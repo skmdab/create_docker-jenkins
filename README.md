@@ -1,6 +1,6 @@
-# Create Jenkins
+# Create Jenkins+Docker
 
-This repository contains scripts and configurations for deploying a Jenkins instance on AWS.
+This repository contains scripts and configurations for deploying a Jenkins+Docker instance on AWS.
 
 ## Prerequisites
 
