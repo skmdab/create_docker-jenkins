@@ -17,7 +17,9 @@ pipeline{
 
         stage('Installing docker+jenkins package into server'){
             steps{
-                sh "ansible-playbook installdocker+jenkins.yaml"
+                withCredentials([file(credentialsId: 'pemfile', variable: 'PEMFILE')]) {
+		sh '"ansible-playbook installdocker+jenkins.yaml --private-key="$PEMFILE"'
+		}
             }
         }
     }
