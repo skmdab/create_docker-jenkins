@@ -1,4 +1,4 @@
-# Create Jenkins+Docker
+# Create Jenkins+Docker <p align="right">  <a href="https://www.jenkins.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="80" height="80"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="80" height="80"/> </a> </p>
 
 This repository contains scripts and configurations for deploying a Jenkins+Docker instance on AWS.
 
